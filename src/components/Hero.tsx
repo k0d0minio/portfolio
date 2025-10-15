@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import content from "@/config/content.json";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -24,22 +25,21 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           <div className="inline-block">
             <span className="text-sm font-semibold tracking-wider uppercase text-primary mb-4 block">
-              Software Engineer
+              {content.hero.tagline}
             </span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Building{" "}
+            {content.hero.headline.part1}{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Exceptional
+              {content.hero.headline.highlight}
             </span>
             <br />
-            Software Solutions
+            {content.hero.headline.part2}
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            5+ years of experience crafting scalable applications and delivering
-            measurable results for clients worldwide.
+            {content.hero.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-fade-in-delayed">
@@ -48,7 +48,7 @@ const Hero = () => {
               className="group bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300"
               onClick={scrollToContact}
             >
-              Let's Work Together
+              {content.hero.buttons.primary}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
@@ -57,14 +57,14 @@ const Hero = () => {
               className="border-primary/30 hover:border-primary hover:bg-primary/10 transition-all"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              View My Work
+              {content.hero.buttons.secondary}
             </Button>
           </div>
 
           {/* Social Links */}
           <div className="flex gap-6 justify-center pt-8">
             <a 
-              href="https://github.com" 
+              href={content.social.github} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -72,7 +72,7 @@ const Hero = () => {
               <Github className="h-6 w-6" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href={content.social.linkedin} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -80,7 +80,7 @@ const Hero = () => {
               <Linkedin className="h-6 w-6" />
             </a>
             <a 
-              href="mailto:hello@example.com"
+              href={`mailto:${content.social.email}`}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail className="h-6 w-6" />

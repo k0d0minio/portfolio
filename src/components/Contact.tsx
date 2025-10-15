@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, MessageSquare, Calendar } from "lucide-react";
+import content from "@/config/content.json";
 
 const Contact = () => {
   return (
@@ -10,13 +11,13 @@ const Contact = () => {
           <Card className="p-12 bg-gradient-card border-border/50 text-center space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h2 className="text-4xl md:text-5xl font-bold">
-                Let's Build Something{" "}
+                {content.contact.heading.part1}{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  Amazing
+                  {content.contact.heading.highlight}
                 </span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Have a project in mind? Let's discuss how I can help bring your vision to life.
+                {content.contact.description}
               </p>
             </div>
 
@@ -26,9 +27,9 @@ const Contact = () => {
                 className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300"
                 asChild
               >
-                <a href="mailto:hello@example.com">
+                <a href={`mailto:${content.contact.email}`}>
                   <Mail className="mr-2 h-5 w-5" />
-                  Email Me
+                  {content.contact.buttons.email}
                 </a>
               </Button>
               <Button 
@@ -37,9 +38,9 @@ const Contact = () => {
                 className="border-primary/30 hover:border-primary hover:bg-primary/10"
                 asChild
               >
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href={content.contact.scheduleLink} target="_blank" rel="noopener noreferrer">
                   <Calendar className="mr-2 h-5 w-5" />
-                  Schedule Call
+                  {content.contact.buttons.schedule}
                 </a>
               </Button>
             </div>
@@ -51,7 +52,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-semibold mb-1">Email</p>
-                  <p className="text-sm text-muted-foreground">hello@example.com</p>
+                  <p className="text-sm text-muted-foreground">{content.contact.email}</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -60,7 +61,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-semibold mb-1">Response Time</p>
-                  <p className="text-sm text-muted-foreground">Usually within 24 hours</p>
+                  <p className="text-sm text-muted-foreground">{content.contact.responseTime}</p>
                 </div>
               </div>
             </div>

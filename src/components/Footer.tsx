@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import content from "@/config/content.json";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,13 +10,13 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Software Engineer Portfolio. Built with React & Tailwind CSS.
+              © {currentYear} {content.footer.copyright}
             </p>
           </div>
 
           <div className="flex gap-6">
             <a 
-              href="https://github.com" 
+              href={content.social.github} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -24,7 +25,7 @@ const Footer = () => {
               <Github className="h-5 w-5" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href={content.social.linkedin} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -33,7 +34,7 @@ const Footer = () => {
               <Linkedin className="h-5 w-5" />
             </a>
             <a 
-              href="mailto:hello@example.com"
+              href={`mailto:${content.social.email}`}
               className="text-muted-foreground hover:text-primary transition-colors"
               aria-label="Email"
             >

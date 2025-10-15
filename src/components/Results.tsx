@@ -1,31 +1,12 @@
 import { TrendingUp, Users, Zap, Award } from "lucide-react";
+import content from "@/config/content.json";
 
-const metrics = [
-  {
-    icon: TrendingUp,
-    value: "150%",
-    label: "Average ROI Increase",
-    description: "for client projects"
-  },
-  {
-    icon: Users,
-    value: "50+",
-    label: "Happy Clients",
-    description: "across 3 continents"
-  },
-  {
-    icon: Zap,
-    value: "200K+",
-    label: "Lines of Code",
-    description: "written and deployed"
-  },
-  {
-    icon: Award,
-    value: "99.9%",
-    label: "Client Satisfaction",
-    description: "rating over 5 years"
-  }
-];
+const iconMap = {
+  TrendingUp,
+  Users,
+  Zap,
+  Award
+};
 
 const Results = () => {
   return (
@@ -33,16 +14,16 @@ const Results = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Proven <span className="bg-gradient-primary bg-clip-text text-transparent">Results</span>
+            {content.results.heading.split(' ')[0]} <span className="bg-gradient-primary bg-clip-text text-transparent">{content.results.heading.split(' ')[1]}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Numbers that speak for themselves
+            {content.results.description}
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {metrics.map((metric, index) => {
-            const Icon = metric.icon;
+          {content.results.metrics.map((metric, index) => {
+            const Icon = iconMap[metric.icon as keyof typeof iconMap];
             return (
               <div 
                 key={metric.label}

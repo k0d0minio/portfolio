@@ -1,0 +1,159 @@
+{
+  "hero": {
+    "tagline": "Software Engineer with a Business-Centered Mind",
+    "headline": {
+      "part1": "Building",
+      "highlight": "Exceptional",
+      "part2": "Digital Solutions"
+    },
+    "description": "6+ years of experience crafting scalable applications and delivering measurable results. I help businesses reduce cognitive load by analyzing processes, identifying bottlenecks, and automating operations.",
+    "buttons": {
+      "primary": "Let's Work Together",
+      "secondary": "View My Work"
+    }
+  },
+  "skills": {
+    "heading": "Technical Expertise",
+    "description": "Proficient in modern technologies and best practices across the full stack",
+    "items": [
+      {
+        "icon": "Code2",
+        "title": "Frontend Development",
+        "technologies": ["React", "Next.js", "TypeScript", "Vite", "JavaScript"]
+      },
+      {
+        "icon": "Database",
+        "title": "Backend Development",
+        "technologies": ["Node.js", "Express", "Python", "Fastify", "Django"]
+      },
+      {
+        "icon": "Cloud",
+        "title": "Cloud & DevOps",
+        "technologies": ["Vercel", "GitLab", "Docker", "Kubernetes", "Jenkins"]
+      },
+      {
+        "icon": "Workflow",
+        "title": "Architecture & Design",
+        "technologies": ["System Design", "Software Architecture", "Business Analysis", "Process Automation", "Long-term Planning"]
+      },
+      {
+        "icon": "GitBranch",
+        "title": "Version Control",
+        "technologies": ["Git", "GitHub", "GitLab", "Code Review", "Branching"]
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Business Solutions",
+        "technologies": ["Consultancy", "Process Optimization", "Automation", "Analytics", "Growth Strategy"]
+      }
+    ]
+  },
+  "process": {
+    "heading": "How I Work",
+    "description": "A proven process that delivers results consistently",
+    "steps": [
+      {
+        "icon": "Search",
+        "title": "Discovery & Research",
+        "description": "A simple meeting over a cup of coffee to assess if our partnership would be the right fit for your business needs."
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Strategy & Planning",
+        "description": "Completely hands-off for the customer while I dive deep into proposition research and create differently tiered offers tailored to your business."
+      },
+      {
+        "icon": "Code",
+        "title": "Development & Testing",
+        "description": "Mostly hands-off for the customer, with access to a protected testing environment so you can see progress and provide feedback throughout development."
+      },
+      {
+        "icon": "Rocket",
+        "title": "Launch & Support",
+        "description": "After final approvals, the launch is seamless. A simple monthly maintenance fee keeps your site/platform running smoothly, with additional features available through our proven process."
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Featured Projects",
+    "description": "Real-world solutions delivering measurable business impact",
+    "items": [
+      {
+        "title": "Sustentus",
+        "description": "Turn missed opportunities into revenue. Connect your clients with expert consultants, improving product adoption, faster deployments, and stronger customer retention—driving growth, efficiency, and recurring revenue.",
+        "technologies": ["React", "Node.js", "MongoDB", "LLMs", "Docker"],
+        "results": ["Improved product adoption", "Faster deployments", "Stronger customer retention"],
+        "link": "https://www.sustentus.com",
+        "github": "#"
+      },
+      {
+        "title": "Messy Play",
+        "description": "Display and booking website for a messy play business based in Portugal, streamlining customer interactions and business management.",
+        "technologies": ["Next.js"],
+        "results": ["Increased customer acquisition", "Improved business management", "Customer retention metrics"],
+        "link": "#",
+        "github": "#"
+      },
+      {
+        "title": "Revora Ride",
+        "description": "Custom built ecommerce platform for a physical goods store selling classic bicycles for kids with a vintage motorbike feel, featuring integrated analytics and marketing tools.",
+        "technologies": ["Next.js", "Stripe", "Supabase"],
+        "results": ["Increased customers", "Improved analytics", "Mass marketing campaign integration"],
+        "link": "#",
+        "github": "#"
+      }
+    ]
+  },
+  "results": {
+    "heading": "Proven Results",
+    "description": "Numbers that speak for themselves",
+    "metrics": [
+      {
+        "icon": "TrendingUp",
+        "value": "Dramatic",
+        "label": "Cognitive Load Reduction",
+        "description": "through business analysis and automation"
+      },
+      {
+        "icon": "Users",
+        "value": "Few Dozen",
+        "label": "Successful Projects",
+        "description": "through word-of-mouth referrals"
+      },
+      {
+        "icon": "Zap",
+        "value": "6+",
+        "label": "Years Experience",
+        "description": "in software engineering and business"
+      },
+      {
+        "icon": "Award",
+        "value": "100%",
+        "label": "Word-of-Mouth",
+        "description": "client acquisition rate"
+      }
+    ]
+  },
+  "contact": {
+    "heading": {
+      "part1": "Let's Build Something",
+      "highlight": "Amazing"
+    },
+    "description": "Have a project in mind? Let's discuss how I can help bring your vision to life and reduce your business's cognitive load.",
+    "buttons": {
+      "email": "Email Me",
+      "schedule": "Schedule Call"
+    },
+    "email": "jamie.nisbet@outlook.be",
+    "responseTime": "Usually within 24-48 hours",
+    "scheduleLink": "https://calendly.com/jamie-nisbet/30min"
+  },
+  "footer": {
+    "copyright": "Jamie Nisbet - Software Engineer with a Business-Centered Mind. Built with React & Tailwind CSS."
+  },
+  "social": {
+    "github": "https://github.com/k0d0minio",
+    "linkedin": "https://www.linkedin.com/in/jamienisbet/",
+    "email": "jamie.nisbet@outlook.be"
+  }
+}

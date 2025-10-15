@@ -1,33 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-
-const projects = [
-  {
-    title: "E-Commerce Platform",
-    description: "Built a scalable e-commerce solution handling 100K+ daily transactions with real-time inventory management and payment processing.",
-    technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
-    results: ["300% increase in sales", "99.9% uptime", "40% faster checkout"],
-    link: "#",
-    github: "#"
-  },
-  {
-    title: "Healthcare Management System",
-    description: "Developed a HIPAA-compliant patient management system streamlining operations for a network of 50+ clinics.",
-    technologies: ["Vue.js", "Python", "MongoDB", "Docker"],
-    results: ["60% time savings", "Zero data breaches", "95% user satisfaction"],
-    link: "#",
-    github: "#"
-  },
-  {
-    title: "Real-Time Analytics Dashboard",
-    description: "Created a comprehensive analytics platform processing millions of data points to provide actionable business insights.",
-    technologies: ["Next.js", "TypeScript", "Redis", "Kubernetes"],
-    results: ["Real-time data sync", "70% faster insights", "Custom reporting"],
-    link: "#",
-    github: "#"
-  }
-];
+import content from "@/config/content.json";
 
 const Projects = () => {
   return (
@@ -35,15 +9,15 @@ const Projects = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="bg-gradient-primary bg-clip-text text-transparent">Projects</span>
+            {content.projects.heading.split(' ')[0]} <span className="bg-gradient-primary bg-clip-text text-transparent">{content.projects.heading.split(' ')[1]}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Real-world solutions delivering measurable business impact
+            {content.projects.description}
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto space-y-8">
-          {projects.map((project, index) => (
+          {content.projects.items.map((project, index) => (
             <Card 
               key={project.title}
               className="p-8 bg-gradient-card border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-card animate-scale-in"

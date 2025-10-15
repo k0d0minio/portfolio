@@ -1,28 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Search, Lightbulb, Code, Rocket } from "lucide-react";
+import content from "@/config/content.json";
 
-const steps = [
-  {
-    icon: Search,
-    title: "Discovery & Research",
-    description: "Understanding your business goals, target audience, and technical requirements to build the perfect solution."
-  },
-  {
-    icon: Lightbulb,
-    title: "Strategy & Planning",
-    description: "Creating a comprehensive roadmap with clear milestones, timeline, and technology stack decisions."
-  },
-  {
-    icon: Code,
-    title: "Development & Testing",
-    description: "Building with clean, scalable code following best practices. Rigorous testing ensures quality at every step."
-  },
-  {
-    icon: Rocket,
-    title: "Launch & Support",
-    description: "Smooth deployment to production with ongoing maintenance, monitoring, and continuous improvements."
-  }
-];
+const iconMap = {
+  Search,
+  Lightbulb,
+  Code,
+  Rocket
+};
 
 const Process = () => {
   return (
@@ -30,17 +15,17 @@ const Process = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            How I <span className="bg-gradient-primary bg-clip-text text-transparent">Work</span>
+            {content.process.heading.split(' ')[0]} I <span className="bg-gradient-primary bg-clip-text text-transparent">{content.process.heading.split(' ')[2]}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A proven process that delivers results consistently
+            {content.process.description}
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6">
-            {steps.map((step, index) => {
-              const Icon = step.icon;
+            {content.process.steps.map((step, index) => {
+              const Icon = iconMap[step.icon as keyof typeof iconMap];
               return (
                 <Card 
                   key={step.title}

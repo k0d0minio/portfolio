@@ -1,38 +1,16 @@
 import { Card } from "@/components/ui/card";
-import { Code2, Database, Cloud, Smartphone, GitBranch, Workflow } from "lucide-react";
+import { Code2, Database, Cloud, Smartphone, GitBranch, Workflow, TrendingUp } from "lucide-react";
+import content from "@/config/content.json";
 
-const skills = [
-  {
-    icon: Code2,
-    title: "Frontend Development",
-    technologies: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js"]
-  },
-  {
-    icon: Database,
-    title: "Backend Development",
-    technologies: ["Node.js", "Python", "PostgreSQL", "MongoDB", "REST APIs"]
-  },
-  {
-    icon: Cloud,
-    title: "Cloud & DevOps",
-    technologies: ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform"]
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile Development",
-    technologies: ["React Native", "Flutter", "iOS", "Android", "PWA"]
-  },
-  {
-    icon: GitBranch,
-    title: "Version Control",
-    technologies: ["Git", "GitHub", "GitLab", "Code Review", "Branching"]
-  },
-  {
-    icon: Workflow,
-    title: "Architecture",
-    technologies: ["Microservices", "System Design", "Clean Code", "Testing", "Agile"]
-  }
-];
+const iconMap = {
+  Code2,
+  Database,
+  Cloud,
+  Smartphone,
+  GitBranch,
+  Workflow,
+  TrendingUp
+};
 
 const Skills = () => {
   return (
@@ -40,16 +18,16 @@ const Skills = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Technical <span className="bg-gradient-primary bg-clip-text text-transparent">Expertise</span>
+            {content.skills.heading.split(' ')[0]} <span className="bg-gradient-primary bg-clip-text text-transparent">{content.skills.heading.split(' ')[1]}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Proficient in modern technologies and best practices across the full stack
+            {content.skills.description}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {skills.map((skill, index) => {
-            const Icon = skill.icon;
+          {content.skills.items.map((skill, index) => {
+            const Icon = iconMap[skill.icon as keyof typeof iconMap];
             return (
               <Card 
                 key={skill.title}
