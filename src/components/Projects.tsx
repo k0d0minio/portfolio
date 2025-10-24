@@ -5,13 +5,13 @@ import content from "@/config/content.json";
 
 const Projects = () => {
   return (
-    <section className="py-24 px-6" id="projects">
+    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6" id="projects">
       <div className="container mx-auto">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             {content.projects.heading.split(' ')[0]} <span className="bg-gradient-primary bg-clip-text text-transparent">{content.projects.heading.split(' ')[1]}</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             {content.projects.description}
           </p>
         </div>
@@ -20,7 +20,7 @@ const Projects = () => {
           {content.projects.items.map((project, index) => (
             <Card 
               key={project.title}
-              className="p-8 bg-gradient-card border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-card animate-scale-in"
+              className="p-6 sm:p-8 bg-gradient-card border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-card animate-scale-in"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="flex flex-col lg:flex-row gap-8">
@@ -54,10 +54,10 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className="flex lg:flex-col gap-3 lg:justify-center">
+                <div className="flex flex-col sm:flex-row lg:flex-col gap-3 lg:justify-center">
                   <Button 
                     variant="outline"
-                    className="border-primary/30 hover:border-primary hover:bg-primary/10"
+                    className="w-full sm:w-auto border-primary/30 hover:border-primary hover:bg-primary/10"
                     asChild
                   >
                     <a href={project.link} target="_blank" rel="noopener noreferrer">
@@ -67,7 +67,7 @@ const Projects = () => {
                   </Button>
                   <Button 
                     variant="outline"
-                    className="border-primary/30 hover:border-primary hover:bg-primary/10"
+                    className="w-full sm:w-auto border-primary/30 hover:border-primary hover:bg-primary/10"
                     asChild
                   >
                     <a href={project.github} target="_blank" rel="noopener noreferrer">

@@ -21,7 +21,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           <div className="inline-block">
             <span className="text-sm font-semibold tracking-wider uppercase text-primary mb-4 block">
@@ -29,7 +29,7 @@ const Hero = () => {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
             {content.hero.headline.part1}{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               {content.hero.headline.highlight}
@@ -38,14 +38,14 @@ const Hero = () => {
             {content.hero.headline.part2}
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {content.hero.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-fade-in-delayed">
             <Button 
               size="lg" 
-              className="group bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300"
+              className="group w-full sm:w-auto bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300"
               onClick={scrollToContact}
             >
               {content.hero.buttons.primary}
@@ -54,7 +54,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-primary/30 hover:border-primary hover:bg-primary/10 transition-all"
+              className="w-full sm:w-auto border-primary/30 hover:border-primary hover:bg-primary/10 transition-all"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               {content.hero.buttons.secondary}
@@ -90,7 +90,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 animate-float">
         <div className="w-6 h-10 border-2 border-primary/30 rounded-full p-2">
           <div className="w-1 h-3 bg-primary rounded-full animate-bounce" />
         </div>
