@@ -11,13 +11,13 @@ const iconMap = {
 
 const Process = () => {
   return (
-    <section className="py-24 px-6 bg-gradient-subtle">
+    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-gradient-subtle">
       <div className="container mx-auto">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             {content.process.heading.split(' ')[0]} I <span className="bg-gradient-primary bg-clip-text text-transparent">{content.process.heading.split(' ')[2]}</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             {content.process.description}
           </p>
         </div>
