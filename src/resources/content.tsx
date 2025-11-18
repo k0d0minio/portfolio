@@ -14,7 +14,7 @@ const person: Person = {
 
 const newsletter: Newsletter = {
   display: false,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&rsquo;s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
 
@@ -64,12 +64,12 @@ const home: Home = {
       </Row>
     ),
     href: "/work/sustentus",
-  },
-  subline: [
-    <>
-      I'm Jamie, a full stack software engineer specializing in AI-driven solutions. I consult,
-      <br /> project manage, and build custom solutions that solve real-world problems.
-    </>,
+    },
+    subline: [
+      <>
+        I&apos;m Jamie, a full stack software engineer specializing in AI-driven solutions. I consult,
+        <br /> project manage, and build custom solutions that solve real-world problems.
+      </>,
     <>
       Full stack engineer with expertise in AI and machine learning. I help businesses
       <br /> leverage technology to achieve their goals through custom-built solutions.
@@ -116,7 +116,7 @@ const about: About = {
       <>
         Jamie is a full stack software engineer based in Lisbon, specializing in AI-driven solutions
         and custom software development. With expertise spanning the entire technology stack, Jamie
-        helps businesses transform their ideas into scalable, intelligent applications. Whether it's
+          helps businesses transform their ideas into scalable, intelligent applications. Whether it&apos;s
         consulting, project management, or building custom solutions, Jamie brings a comprehensive
         approach to software engineering.
       </>

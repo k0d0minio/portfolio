@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -25,27 +23,29 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check if API key and email are configured
-    if (!process.env.RESEND_API_KEY) {
-      console.error("RESEND_API_KEY environment variable is not set");
-      return NextResponse.json(
-        { error: "Email service is not configured." },
-        { status: 500 }
-      );
-    }
+      // Check if API key and email are configured
+      const apiKey = process.env.RESEND_API_KEY;
+      if (!apiKey) {
+        console.error("RESEND_API_KEY environment variable is not set");
+        return NextResponse.json(
+          { error: "Email service is not configured." },
+          { status: 500 }
+        );
+      }
 
-    // EMAIL_TO is optional - defaults to your verified email for testing
+      // EMAIL_TO is optional - defaults to your verified email for testing
 
-    // Determine the 'from' address
-    // In testing mode, Resend only allows sending to your own verified email
-    // Once you verify a domain, update RESEND_FROM_EMAIL to use your domain
-    const fromEmail =
-      process.env.RESEND_FROM_EMAIL || "noreply@mail.jamienisbet.com";
-    const recipientEmail =
-      process.env.RESEND_EMAIL_RECIPIENT || "noreply@mail.jamienisbet.com";
+      // Determine the 'from' address
+      // In testing mode, Resend only allows sending to your own verified email
+      // Once you verify a domain, update RESEND_FROM_EMAIL to use your domain
+      const fromEmail =
+        process.env.RESEND_FROM_EMAIL || "noreply@mail.jamienisbet.com";
+      const recipientEmail =
+        process.env.RESEND_EMAIL_RECIPIENT || "noreply@mail.jamienisbet.com";
 
-    // Send email using Resend
-    const { data, error } = await resend.emails.send({
+      // Send email using Resend
+      const resend = new Resend(apiKey);
+      const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: recipientEmail,
       replyTo: email,
