@@ -188,19 +188,19 @@ export default function ContactForm() {
             }}
           />
           {errors.message && (
-            <Text variant="body-default-s" onBackground="feedback-error-strong">
+            <Text variant="body-default-s" onBackground="accent-strong">
               {errors.message}
             </Text>
           )}
           
           {submitStatus === "success" && (
-            <Text variant="body-default-s" onBackground="feedback-success-strong">
+            <Text variant="body-default-s" onBackground="brand-strong">
               {submitMessage}
             </Text>
           )}
           
           {submitStatus === "error" && (
-            <Text variant="body-default-s" onBackground="feedback-error-strong">
+            <Text variant="body-default-s" onBackground="accent-strong">
               {submitMessage}
             </Text>
           )}
