@@ -114,13 +114,13 @@ export default function ContactForm() {
   };
 
   return (
-    <Column gap="m">
-      <Heading variant="display-strong-xs" marginBottom="s">
-        Send a Message
-      </Heading>
-      <Text variant="body-default-l" onBackground="neutral-weak" marginBottom="l">
-        Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.
-      </Text>
+      <Column gap="m">
+        <Heading variant="display-strong-xs" marginBottom="s">
+          Send a Message
+        </Heading>
+        <Text variant="body-default-l" onBackground="neutral-weak" marginBottom="l">
+          Have a question or want to work together? Fill out the form below and I&apos;ll get back to you as soon as possible.
+        </Text>
       
       <form onSubmit={handleSubmit}>
         <Column gap="m">
@@ -186,6 +186,7 @@ export default function ContactForm() {
               fontSize: "14px",
               resize: "vertical",
             }}
+<<<<<<< HEAD
           />
           {errors.message && (
             <Text variant="body-default-s" onBackground="accent-strong">
@@ -204,6 +205,35 @@ export default function ContactForm() {
               {submitMessage}
             </Text>
           )}
+=======
+            />
+            {errors.message && (
+              <Text
+                variant="body-default-s"
+                style={{ color: "var(--feedback-error-strong)" }}
+              >
+                {errors.message}
+              </Text>
+            )}
+            
+            {submitStatus === "success" && (
+              <Text
+                variant="body-default-s"
+                style={{ color: "var(--feedback-success-strong)" }}
+              >
+                {submitMessage}
+              </Text>
+            )}
+            
+            {submitStatus === "error" && (
+              <Text
+                variant="body-default-s"
+                style={{ color: "var(--feedback-error-strong)" }}
+              >
+                {submitMessage}
+              </Text>
+            )}
+>>>>>>> af270ca9d21afff4512fce6f9dbc10240cf1d47b
           
           <Button
             type="submit"
