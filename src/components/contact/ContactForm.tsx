@@ -186,54 +186,33 @@ export default function ContactForm() {
               fontSize: "14px",
               resize: "vertical",
             }}
-<<<<<<< HEAD
           />
           {errors.message && (
-            <Text variant="body-default-s" onBackground="accent-strong">
+            <Text
+              variant="body-default-s"
+              style={{ color: "var(--feedback-error-strong)" }}
+            >
               {errors.message}
             </Text>
           )}
           
           {submitStatus === "success" && (
-            <Text variant="body-default-s" onBackground="brand-strong">
+            <Text
+              variant="body-default-s"
+              style={{ color: "var(--feedback-success-strong)" }}
+            >
               {submitMessage}
             </Text>
           )}
           
           {submitStatus === "error" && (
-            <Text variant="body-default-s" onBackground="accent-strong">
+            <Text
+              variant="body-default-s"
+              style={{ color: "var(--feedback-error-strong)" }}
+            >
               {submitMessage}
             </Text>
           )}
-=======
-            />
-            {errors.message && (
-              <Text
-                variant="body-default-s"
-                style={{ color: "var(--feedback-error-strong)" }}
-              >
-                {errors.message}
-              </Text>
-            )}
-            
-            {submitStatus === "success" && (
-              <Text
-                variant="body-default-s"
-                style={{ color: "var(--feedback-success-strong)" }}
-              >
-                {submitMessage}
-              </Text>
-            )}
-            
-            {submitStatus === "error" && (
-              <Text
-                variant="body-default-s"
-                style={{ color: "var(--feedback-error-strong)" }}
-              >
-                {submitMessage}
-              </Text>
-            )}
->>>>>>> af270ca9d21afff4512fce6f9dbc10240cf1d47b
           
           <Button
             type="submit"
